@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIZA EXPRESS</title>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+<link rel="stylesheet" href="/css/client/style.css">
+</head>
+<body>
+
+    <%- include('partials/navbar') %>
+    <header>
+
+        <div  id="unaccess-msg"  class="hide">
+            <button type="button" id="close-btn"  title="Fermer">
+                <i class="fa-solid fa-xmark"></i></button> 
+            <p id="unaccess-msg-text"></p>
+        </div>
+
+
+        <section id="hero">
+            <img src="/images/Zizaxpress.svg" alt="" class="logo">
+            <div class="slides">
+                <img src="/images/caroussel.jpg" alt="" class="slide active" >
+                <img src="/images/caroussel2.jpg" alt=""class="slide">
+                <img src="/images/caroussel3.jpg" alt="" class="slide">
+                <img src="/images/caroussel4.jpg" alt="" class="slide">
+            </div>
+            <div class="overlay"></div>
+            <p class="devise">Faites-vous livrer, où que vous soyez. <span>« Aucun service n'est trop petit lorsqu'il peut rendre service a quelqu'un  »</span></p>
+            <div class="content">
+                    <button class="btn-secondary" id="service-btn">Demander une service</button>
+                    <button class="btn-gold" type="button"  id="delivery-btn" >Demander une livraison
+                        <span  class="subtitle">Suivez votre livraison en temps réel</span></button>
+                </div>      
+            </div>
+        
+        </section>
+        <section id="client-feedback">
+        </section>
+
+    </header>
+    <main>
+    <!-- services -->
+        <section id="services">
+            <h2  class="service-title">NOS SERVICES</h2>
+            <div class="services">
+                <div class="service">
+                    <i class="fa-solid fa-cart-shopping  icon"></i>
+                    <p class="service-parag">Livraison de colis et de petits objets </p>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-box icon"  ></i>
+                    <p class="service-parag">Course au boutique ou au marche </p>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-file-lines icon"></i>  
+                    <p class="service-parag">depot et retrait de documents </p>                  
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-gift icon"></i>
+                    <p class="service-parag">livraison de cadeaux </p>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-hand-holding-hand icon"></i>
+                    <p class="service-parag">Aides pour vos divers taches </p>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-hand-holding-heart  icon"></i>
+                    <p class="service-parag">Assistance aux personnes ages et tres occupes </p>
+
+                </div>
+            </div>
+
+        </section>
+
+<!-- nos tarifs  -->
+        <section id="pricing">
+            <h2  class="pricing-title">NOS TARIFS</h2>
+            <div class="pricings">
+                <div class="pricing">
+                    <h3  class="zone">Cite de Diobass </h3>
+                    <p   class="price"> 200 a 500 FCFA</p>
+                </div>
+                <div class="pricing">
+                    <h3 class="zone">Zones proches de Thies</h3>
+                    <p  class="price">A partir de 500 FCFA</p>
+                </div>
+                <div class="pricing">
+                    <h3 class="zone">Longues distances ou services particuliers </h3>
+                    <p   class="price pricing-except">Le tarif varie selon  la distance parcourue et le type de prestation (colis simple, course urgente, marchandise fragile, etc.) <span>
+                        "Ex : Sacré-Cœur → Plateau, colis standard ≈ 1000 FCFA"
+                    </span></p>
+                </div>
+            </div>
+
+        </section>
+        <section id="why-us">
+            <h2 class="why_us_title">POURQUOI CHOISIR NOS SERVICES?</h2>
+            <div  class="why-us-content">
+                <div class="fact">
+                    <i class="fa-solid fa-bolt  why-us-icon"></i>
+                    <h3 class="why-us_h3">Rapidite</h3>
+                    <p class="why-us_parag">Livraison en quelques minutes, pas en quelques heures.</p>
+                </div>
+                <div class="fact">
+                    <i class="fa-solid fa-shield-halved  why-us-icon"></i>
+                    <h3  class="why-us_h3">Fiabilité</h3>
+                    <p  class="why-us_parag">Votre colis, livré avec soin et à l'heure</p>
+                </div>
+                <div class="fact">
+                    <i class="fa-solid fa-map-location-dot why-us-icon"></i>
+                    <h3  class="why-us_h3">Proximité</h3>
+                    <p  class="why-us_parag">Un vrai livreur, joignable directement par téléphone.</p>
+                </div>
+            </div>
+            
+        </section>
+        <section id="how-it-work">
+
+    <!-- timeline -->
+            <h2>COMMENT CA MARCHE ?</h2>
+
+            <!-- defilement de 1 2 3 suivant l'etape dans  lalquelle on est  -->
+            <div class="how-it-works__step">
+                <span class="how-it-work-number">1</span>
+                <div class="how-it-works__content">
+                    <h3 class="how-it-works__title">Commandez </h3>
+                    <p class="how-it-works__description">via notre formulaire ou Whatsapp </p>
+                </div>
+            </div>
+            <div class="how-it-works__step">
+                <span class="how-it-work-number">2</span>
+                <div class="how-it-works__content">
+                    <h3 class="how-it-works__title">On confirme </h3>
+                    <p class="how-it-works__description">Dès que possible, avec le délai estimé. </p>
+                </div>
+            </div>
+            <div class="how-it-works__step">
+                <span class="how-it-work-number">3</span>
+                <div class="how-it-works__content">
+                    <h3 class="how-it-works__title">On vous livre  </h3>
+                    <p class="how-it-works__description">En toute sécurité, à destination. </p>
+                </div>
+            </div>
+        </section>
+        <section id="pay">
+        
+            <h2> MODE DE PAIEMENT</h2>
+            <div class="pays">
+                <div class="pay">
+                    <img src="/images/cash.jpg" alt=""  class="payment-method">
+                    <p>Cash</p>
+                </div>
+                <div class="pay">
+                    <img src="/images/wave.jpg" alt="" class="payment-method">
+                </div>
+                <div class="pay">
+                    <img src="/images/orangeMoney.jpg" alt=""  class="payment-method">
+                </div>
+            </div>
+        </section>
+        <section id="feedback">
+            <form action="" id="feedback-form">
+                <div  id="success-msg" class="hide"></div>
+                <h3  class="feedback-title">Partagez votre expérience et aidez-nous
+                    à améliorer notre service. </h3>
+                    <div id="feed-form-error"></div>
+                <input type="text" name="name" placeholder="Nom  complet"class="feedback-input"  id="name" >
+                <div id="error-name"></div>
+                <textarea name="commentary"  placeholder="Votre commentaire" class="feedback-input" id="comment"></textarea> 
+                <div id="error-comment"></div>
+                <button type="submit" id="feedback-btn"  class="feedback-submit">Envoyer</button>
+            </form>
+            
+        </section>
+            <div id="schedule">
+            <h2>HORAIRES : 06H-21H</h2>
+            <p>Les urgences restent notre priorité. Selon nos disponibilités, 
+                nous pouvons intervenir en dehors de nos heures de service.</p>
+        </div>
+
+    </main>
+    <footer id="footer">
+
+        <section id="footer-nav">
+            <a href="/index">Accueil</a>
+            <a href="/order-tracking">Suivi de livraison</a>
+            <a href="/about-us">A propos de nous</a>
+        </section>
+        <p>© 2026 — Tous droits réservés · Conçu & développé par XBAM  Cyber </p>
+    </footer>
+
+
+<script  src="/js/index.js"></script>
+</body>
+</html>
+
+

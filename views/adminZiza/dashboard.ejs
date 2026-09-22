@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin/style.css">
+</head>
+<body>
+    <%- include('../partials/navbarAdmin') %>
+    <main>
+    <h1 id="greet"> </h1>
+
+    <div id="all-card">
+        <div class="card">
+            <p> Livraison du jour  </p>
+            <span id="daily-order"> </span>
+        </div>
+        <div class="card">
+            <p> 7 Derniers jours</p>
+            <span id="weekly-order"> </span>
+        </div>
+        <div class="card">
+            <p> Ce mois-ci </p>
+            <span id="monthly-order"></span>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <h2>Disponibilite </h2>
+    </div>
+
+    <div class="board" id="pending-delivery">
+        <h2>Livraison en attente</h2>
+        <div id="none-delivery">Aucune livraison pour le moment </div>
+        <table id="delivery-table" class="hide">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Telephone</th>
+                    <th>Heure</th>
+                    <th>Details</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="delivery-table-body">
+            </tbody>
+        </table>
+
+        <dialog id="detailDialog">
+            <h2>Details sur la livraison</h2>
+            <div id="detailsContent"></div>
+            <div id="dialog-btn">
+                <button type="button" id="closeDialogBtn">Fermer</button>
+                <button type="button" id="confirm-delivery-btn">Confirmer la livraison</button>
+            </div>
+        </dialog>
+    </div>
+
+    <div class="board" id="services">
+        <h2>Dernier Service</h2>
+        <p id="none-service">Aucune services aujourd'hui</p>
+        <table id="services-table" class="hide">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom </th>
+                    <th>Telephone</th>
+                    <th>Service</th>
+                    <th>Details</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="services-table-body">
+            </tbody>
+        </table>
+
+        <dialog id="serviceDetailDialog">
+            <h2>Details sur le service</h2>
+            <div id="servicedetailsContent"></div>
+            <div id="service-dialog-btn">
+                <button type="button" id="closeServiceDialogBtn"><i class="fa-solid fa-xmark"></i></button>
+                <button type="button" id="confirm-service-btn">Confirmer le service</button>
+            </div>
+        </dialog>
+    </div>
+
+    <div class="board" id="feedback">
+        <h2>Dernier avis</h2>
+        <p id="none-feedback">Aucun avis pour l'instant</p>
+        <div id="feedback-container">
+        </div>
+    </div>
+    </main>
+    <script src="/js/admin/dashboard.js"></script>
+</body>
+</html>

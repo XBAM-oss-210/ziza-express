@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin/style.css">
+    <title>SERVICES PROPOSES</title>
+</head>
+<body>
+    <%- include('../partials/navbarAdmin') %>
+
+    <main>
+        <h1>Services demandés</h1>
+
+        <div class="board" id="services">
+            <div id="none-service">Aucun service demandé pour le moment</div>
+
+            <table id="service-table" class="hide">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nom</th>
+                        <th>Telephone</th>
+                        <th>Service</th>
+                        <th>Action</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="service-table-body"></tbody>
+            </table>
+
+            <dialog id="dialog-service">
+                <button type="button" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <div id="detail-content"></div>
+            </dialog>
+        </div>
+    </main>
+
+    <script src="/js/admin/navbar.js"></script>
+    <script src="/js/admin/services.js"></script>
+</body>
+</html>

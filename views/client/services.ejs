@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES</title>
+    <link rel="stylesheet" href="/css/client/service.css">
+
+    <style>
+.hide{
+    display: none;
+}
+.show{
+    display:flex
+}
+    </style>
+</head>
+<body>
+    <div id="form-service-page">
+        <h1> Nouvelle demande de service </h1>
+        <form action="" id="service-form">
+            <div id="service-message"></div>
+            <input type="text"  id="fullname" placeholder="Nom complet"  class ='input-field'  ><br>
+            <div id="error-fullname"></div>
+            <input type="number" id="phone" placeholder="Numero de Telephone "  class ='input-field' ><br>
+            <div id="error-phone"></div>
+            <div class="wishServices"  >
+                    <select id="wishService"   title="Types de service"  class ='input-field' >
+                        <option value="" disabled selected hidden>Types de services</option>
+                        <option value="course">Course en boutique ou marche </option>
+                        <option value="helping-hand">Coup de main pour divers taches </option>
+                        <option value="older-assistance">Assistance personne ages</option>
+                        <option value="busy-assistance">Assistance personnes occupes</option>
+                        <option value="others">Autres  </option>
+                    </select>
+                    <div id="wishServiceContainer" hidden>
+                        <input
+                            type="text"
+                            id="customService"
+                            placeholder="  Preciser (Ex Petits travaux  ...)">
+                    </div>
+                </div>
+                <div id="error-wishService"></div>
+                <br>
+
+        <textarea  id="instruction" cols="26" rows="4" placeholder=" Dites nous ce dont vous avez besoin? "   class ='input-field'   ></textarea><br>
+        <div id="error-instruction"></div>
+        <input type="number" name="" id="proposalBudget" placeholder="Budget propose"  class ='input-field'   >
+        <div id="error-proposalBudget"></div>
+        <br>
+        <button type="submit">Confirmer</button>
+        </form>
+    </div>
+
+    <script  src="../js/serviceFrontValidation.js">
+    </script>
+</body>
+</html>

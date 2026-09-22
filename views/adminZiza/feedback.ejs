@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin/style.css">
+</head>
+<body>
+    <%- include('../partials/navbarAdmin') %>
+
+    <main>
+        <div class="toolbar">
+            <h1>Avis Client</h1>
+            <p class="feedback-total">Total avis : <span id="feedback-count">0</span></p>
+        </div>
+
+        <div class="board">
+            <div id="none-feedback">Aucun avis pour le moment</div>
+            <div id="feedback-container"></div>
+        </div>
+    </main>
+
+    <script src="/js/admin/feedback.js"></script>
+</body>
+</html>

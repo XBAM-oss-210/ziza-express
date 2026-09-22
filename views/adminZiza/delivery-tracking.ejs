@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTION DES LIVRAISONS</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/admin/style.css">
+        <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/navbarAdmin') %>
+<main>
+    <div class="toolbar">
+        <h1>Livraisons</h1>
+        <div class="toolbar-actions">
+            <select name="" id="filter" title="Filtrer">
+                <option value="" hidden>Filtrer</option>
+                <option value="pending">En attente</option>
+                <option value="delivered">Livrée</option>
+                <option value="today">Aujourd'hui</option>
+                <option value="week">Cette semaine</option>
+                <option value="month">Ce mois</option>
+            </select>
+            <button type="button" id="refresh-btn" title="Actualiser"><i class="fa-solid fa-rotate"></i></button>
+        </div>
+    </div>
+
+    <div class="board">
+        <div id="none-Alldelivery"></div>
+        <table id="table-delivery" class="hide">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Numero de telephone</th>
+                    <th>Actions</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="delivery-table-body"></tbody>
+        </table>
+    </div>
+
+    <dialog id="detail-dialog">
+        <button type="button" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <div id="detail-content"></div>
+    </dialog>
+</main>
+
+
+
+
+<script  src="/js/admin/delivery.js"></script>
+
+</body>
+</html>

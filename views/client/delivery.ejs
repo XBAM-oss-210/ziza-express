@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULAIRE DE LIVRAISON</title>
+    <link rel="stylesheet" href="/css/client/deliver.css">
+
+    <style>
+        .hide {
+            display: none ;
+        }
+        .show{
+            display: flex ;
+        }
+        .form-style{
+            flex-direction :column;
+        }
+        .succcess{
+            color:green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="delivery-contact">
+        <h1>COORDONNEES </h1>
+        <form action="" id="contactForm">
+            <div class="form-error"></div>
+            <!-- nom et telephones personne vers laquelle le colis doit etre recupere et livres  -->        
+            <label for="sender-name"  >Expediteur </label><br><br>
+            <input type="text" name="" id="sender-name" placeholder="Nom Complet(Ex:Aziz Ba)"  class="input-field"><br>
+            <input type="number" name="" id="sender-phone" placeholder="Numero de telephone"  class="input-field"><br>
+
+        <!-- Adresse de recuperation et lieu ou recuperer la colis   -->
+            <input  type="text" id="recoveryZone" placeholder="Ou recuperer le colis(Ex:Mboro)"  class="input-field" ><br><br>
+    
+            <br><br>
+
+            <label for="recipient-name">Destinataire </label><br><br>
+            <input type="text"  id="recipient-name" placeholder="Nom Complet(Ex:Aziz Ba)"  class="input-field"><br>
+            <input type="number"  id="recipient-phone" placeholder="Numero de telephone"  class="input-field"><br>
+            <div class="deliveryZone">
+
+                <select id="deliveryZone" name="deliveryZone"   title="adresse de Livraison"  class="input-field" >
+                    <option value="" disabled selected hidden>Sélectionner l'adresse de Livraison </option>
+                    <option value="thies-ville">Thiès Ville</option>
+                    <option value="diobass">Diobass</option>
+                    <option value="autre">Autres Zones</option>
+                </select>
+
+                <div id="customZoneContainer"  hidden>
+                    <label for="customZone">Préciser la zone</label><br>
+                    <input
+                        type="text"
+                        id="customZone"
+                        class="input-field" 
+                        name="customZone"
+                        placeholder="Ex. Mbour, Tivaouane...">
+                </div>
+            </div><br>
+
+            <button type="submit" id="continue-btn">Continuer</button>
+
+
+        </form>
+    </div>
+
+    <div  id="package-info" class="hide  form-style"  >
+        <h1>INFORMATION SUR LA COLIS</h1>
+        <div class="form-error"></div>
+        <div id="success" class="hide"></div>
+        <form action=""  id="packageForm">
+            <!-- Types de colis -->
+            <div class="packageType">
+
+                <select id="packageTypes" name="packageTypes"   title="Types de colis"  class="input-field"  >
+                    <option value="" disabled selected hidden>Types de colis</option>
+                    <option value="Petit objet">Petit objet</option>
+                    <option value="produit Alimentaire">produit Alimentaire</option>
+                    <option value="Cadeaux">Cadeaux</option>
+                    <option value="Documents">Documents</option>
+                    <option value="autres">Autres</option>
+                </select>
+
+                <div id="customPackageContainer" hidden>
+                    <input
+                        type="text"
+                        id="customPackage"
+                        class="input-field" 
+                        name="customPackage"
+                        placeholder="  Preciser (Ex. Vetements...)">
+                </div>
+            </div><br>
+            <div id="error-packageType"></div>
+        
+
+            <textarea  id="instruction"  class="input-field"  cols="26" rows="4" placeholder=" Ajouter une instruction (Ex:Appeler avant de venir )"  ></textarea><br>
+            <div id="error-instruction"></div>
+
+            <!-- Quand (maintenant / programmé + date-heure)  -->
+            <div>
+                <label for="hour">Heure de livraison  souhaite </label><br>
+                <input type="time" id="hour"  class="input-field"  name="hour"  required><br><br>
+            </div>   
+            <div id="error-hour"></div>            
+            <!-- moyen de paiement  -->
+            <div id='paymentMethod'>
+                <fieldset>
+                    <legend>Mode de paiement</legend>
+                    <label>
+                        <input type="radio" class="payment-method" name="paymentMethod" value="cash" required>
+                        Espèces
+                    </label>
+                    <label>
+                        <input type="radio" class="payment-method"  name="paymentMethod" value="orange-money">
+                        Orange Money
+                    </label>
+                    <label>
+                        <input type="radio" class="payment-method"  name="paymentMethod" value="wave">
+                        Wave
+                    </label>
+                </fieldset>
+            </div>
+            <div id="error-paymentMethod"></div>
+            <button type="submit" id="confirm-btn">Confirmer </button>
+        </form>
+    </div>
+
+    <script src="../js/deliveryFrontValidation.js">
+
+    </script>
+</body>
+</html>
