@@ -16,7 +16,7 @@ const { getAllDeliveries } = require('../models/adminPagesModel')
 
 
 router.post('/auth', checkRateLimit, authAdmin, adminController.loginAdmin)
-// router.get('/auth', adminController.showAuthFormular)
+router.get('/auth', adminController.showAuthFormular)
 router.get('/auth/status', adminController.getAuthStatus)
 
 router.use(adminAuth)
