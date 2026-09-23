@@ -1,0 +1,55 @@
+🚴 Ziza Express
+
+Application web de livraison à vélo, développée pour un service local sénégalais proposant :
+
+- Livraison de colis et petits objets (cadeaux, documents...)
+- Courses et services divers ("aide pour des taches du quotidien ")
+- Aide aux personnes âgées
+
+
+
+🛠️ STACK TECHNIQUE 
+
+Backend : Node.js, Express.js
+Base de données : PostgreSQL (Supabase — serverless)
+Moteur de templates : EJS
+Frontend : HTML, CSS, JavaScript (vanilla)
+
+
+FONCTIONNALITES 
+  Espace client
+  Formulaire de demande de livraison en 2 étapes (détails du colis, puis contact & paiement), sans rechargement de page
+  Paiement via Wave, Orange Money ou espèces
+  Formulaire de feedback général (note + commentaire)
+  Authentification sécurisée (hashage bcrypt, sessions, rate limiting)
+  
+📁 Structure du projet
+├── src/
+│   ├── config/        
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middlewares/
+│   ├── validators/      
+│   ├── views/           
+│   └── server.js       
+├── public/
+│   ├── css/
+│   └── js/
+│   └── images/
+└── package.json
+└── .gitingore
+
+
+
+L'application est accessible sur http://localhost:3000 en local .
+
+DESIGN
+Interface responsive, conçue en mobile-first (la majorité des utilisateurs commandant depuis leur téléphone), avec Flexbox/Grid et unités fluides (clamp()).
+
+SECURITE 
+Mots de passe hashés (bcrypt), jamais stockés en clair
+Sessions sécurisées, routes admin protégées par middleware
+Validation des données côté client (UX) et côté serveur (fiabilité)
+Rate limiting sur les routes sensibles (connexion admin notamment)
+
