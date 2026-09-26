@@ -1,3 +1,8 @@
+
+
+
+
+
 //-------------------------------------------------------------------------------------------
 const unaccessMsg = document.getElementById('unaccess-msg')
 const closeBtn = document.getElementById('close-btn');
@@ -6,6 +11,7 @@ const closeBtn = document.getElementById('close-btn');
         unaccessMsg.classList.add('hide')
     })
 
+    
 //----------------------------------------------------------------------------------------
 const slides = document.querySelectorAll(".slide");
 let index = 0;

@@ -46,10 +46,6 @@ async function showServiceDetails(id) {
     try {
         const response = await fetch(`/admin_ziza/services/${id}`);
         const serviceData = await response.json();
-        console.log('service:',response)
-        console.log('donnees recu:',serviceData);
-        
-
         if (!response.ok) throw new Error('Erreur lors de la récupération des détails');
         servicedetailContent.innerHTML = `
                 <p><strong>Nom Complet :</strong> ${serviceData.requester_name}</p>
@@ -57,8 +53,10 @@ async function showServiceDetails(id) {
                 <p><strong>Service :</strong> ${serviceData.service }</p>
                 <p><strong>Prix proposé :</strong> ${serviceData.proposed_price }</p>
                 <p><strong>Détails du service :</strong> ${serviceData.service_details }</p>
-                <p><strong> A livrer a :</strong> ${serviceData.created_at }</p>
-            `;
+                <p>
+                    <strong>À livrer le :</strong>
+                    ${new Date(serviceData.created_at).toLocaleDateString("fr-FR")}
+                </p>            `;
 
         serviceDetailDialog.showModal();        
     } catch (error) {

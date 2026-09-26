@@ -81,7 +81,7 @@ authForm.addEventListener('submit', async (e) => {
         })
 
         const data = await response.json();
-
+        
         if (response.status === 429) {
             startCountdown(data.remainingSeconds)
             return
@@ -106,6 +106,8 @@ authForm.addEventListener('submit', async (e) => {
                 errorMsg.textContent = data.message
                 errorMsg.style.display = 'block';
             }
+        }else{
+            window.location.href = "/admin_ziza/dashboard";
         }
 
     } catch (erreur) {

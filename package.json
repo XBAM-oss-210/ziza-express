@@ -2,15 +2,23 @@
   "name": "zizaexpress",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/XBAM-oss-210/ziza-express#readme",
+  "bugs": {
+    "url": "https://github.com/XBAM-oss-210/ziza-express/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XBAM-oss-210/ziza-express.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.38.3",
